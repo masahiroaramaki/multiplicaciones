@@ -1,0 +1,62 @@
+/* CSS Document */
+p{font-size:1.5em;}
+.muestra ul{
+width:65%;
+margin:30px auto;
+list-style-type:none;
+}
+h1,.muestra,.showHideBoton,.pruebalo,.resultado,.rewff{
+margin:50px auto;
+text-align:center;
+}
+.respuesta{
+ width:40px;
+ }
+ .pageLink{
+
+ width:80%;
+ margin:10px auto;
+ text-align:center;
+ border:1px solid blue;
+ background-color:#00ff00;
+ }
+ 
+ .pruebalo{
+  padding:20px;
+ width:80%;
+ border:1px solid red;
+ background-color:#ffcc00;
+ }
+ .noHaceFalta{
+ background-color:#ffcc00;
+ border:1px solid black;
+ }
+ .rojo{
+ color:red;
+ text-decoration:none;
+ }
+ .tachado{
+ text-decoration:line-through;
+ }
+.aprender{
+border:1px double green;
+background-color:#ff99ff;
+}
+table
+{
+width:80%;
+border-collapse:collapse;
+}
+table,th, td
+{
+border: 1px solid black;
+}
+.first{
+font-weight:bold;
+}
+.noVan{
+background-color:#ffcc00;
+}
+#pruebaIndex li a,#listDivider{text-align:center;
+letter-spacing:1px;
+}

@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html> 
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Multiplicaciones</title>
+
+<link href="http://code.jquery.com/mobile/1.0rc1/jquery.mobile-1.0rc1.min.css" rel="stylesheet"  />
+<link href="css/general.css" rel="stylesheet" />
+
+<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.0rc1/jquery.mobile-1.0rc1.min.js"></script>
+<script src="js/general.js" type="text/javascript" charset="iso-8859-1"></script>
+</head>
+
+<body>
+
+<!--//////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+<!--Home-->
+ <div data-role="page" id="home">
+
+   <div data-role="header" class="toppage" >
+     <h1>Multiplicaciones</h1>
+   </div><!--header-->
+
+   <div data-role="content">
+        <center>
+          <img src="images/Multiplicaciones.gif"  alt="multiplicaciones"  class="wide" />
+		 </center>
+     <div data-role="controlgroup">	    
+          <a href="#tabla" data-role="button" data-icon="arrow-r" data-iconpos="right" data-theme="e">
+		  Tablas de multiplicaciones</a> 
+	      <a href="#pruebaIndex" data-role="button" data-icon="arrow-r" data-iconpos="right" 
+		  data-theme="e">
+		  Pruebas de multiplicaciones </a>       
+     </div>
+  </div><!--content-->
+
+  <div data-role="footer" >
+     <div data-role="navbar">
+       <ul>
+          <li><a href="#resultado" data-icon="star" class="resultadoFinal" 
+		  data-transition="slideup">Resultado</a></li>
+		  <li><a href="#home" data-icon="home" >Home</a></li>          
+          <li><a href="mailto:info@masahiroaramaki.com" data-icon="info" data-transition="pop">Autor</a>
+		  </li>
+       </ul>
+     </div>
+       <h4>&copy;2014 www.masahiroaramaki.com </h4>
+   </div><!--footer-->
+
+ </div><!--page-->
+<!--///////EndHome///////-->
+
+<!--//////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+<!--///////Tabla///////-->
+ <div data-role="page" id="tabla" data-title="tabla de multiplicaciones" data-add-back-btn="true">
+
+   <div data-role="header" data-position="fixed" data-theme="e"> 
+     <h1>Tabla de multipicaciones</h1>
+   </div><!--header-->
+
+   <div data-role="content">
+    <center>    
+     <p>Sólo tienes que aprender las casillas que NO estén amarillas.</p>
+     <p>Partes por los números de la izquierda. Como ves, multiplicación por 2 hay más(8).</p>
+     <p>Cada vez que aumente el número de la izquierda(hacía bajo), menos tendrás que memorizar.</p>
+      <table>
+       <th></th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th>
+       <tr><td class="first">2</td><td>4</td><td>6</td><td>8</td><td>10</td><td>12</td><td>14</td><td>16
+	   </td><td>18</td></tr><tr><td class="first">3</td><td class="noVan">6</td><td>9</td><td>12</td>
+	   <td>15</td><td>18</td><td>21</td><td>24</td><td>27</td></tr><tr><td class="first">4</td>
+	   <td class="noVan">8</td><td class="noVan">12</td><td>16</td><td>20</td><td>24</td><td>28</td>
+	   <td>32</td><td>36</td></tr><tr><td class="first">5</td><td class="noVan">10</td><td class="noVan">
+	   15</td><td class="noVan">20</td><td>25</td><td>30</td><td>35</td><td>40</td><td>45</td></tr><tr>
+	   <td class="first">6</td><td class="noVan">12</td><td class="noVan">18</td><td class="noVan">24
+	   </td><td class="noVan">30</td><td>36</td><td>42</td><td>48</td><td>54</td></tr><tr>
+	   <td class="first">7</td><td class="noVan">14</td><td class="noVan">21</td><td class="noVan">28
+	   </td><td class="noVan">35</td><td class="noVan">42</td><td>49</td><td>56</td><td>63</td></tr><tr>
+	   <td class="first">8</td><td class="noVan">16</td><td class="noVan">24</td><td class="noVan">32</td>
+	   <td class="noVan">40</td><td class="noVan">48</td><td class="noVan">56</td><td>64</td><td>72</td>
+	   </tr><tr><td class="first">9</td><td class="noVan">18</td><td class="noVan">27</td>
+	   <td class="noVan">36</td><td class="noVan">45</td><td class="noVan">54</td><td class="noVan">63
+	   </td><td class="noVan">72</td><td>81</td></tr>
+      </table>
+       <br/>
+       <br/>
+     <a href="#pruebaIndex" data-role="button" data-inline="true" data-theme="b">Para practicar</a>
+	</center>
+   </div><!--content-->  
+   
+   <div data-role="footer" data-position="fixed" data-theme="e">
+     <div data-role="navbar">
+       <ul>
+          <li><a href="#resultado" id="result" data-icon="star" data-transition="slideup">Resultado
+		  </a></li>
+		  <li><a href="#home" data-icon="home" >Home</a></li>         
+          <li><a href="mailto:info@masahiroaramaki.com" data-icon="info" data-transition="pop">Autor</a>
+		  </li>
+       </ul>
+     </div>
+       <h4>&copy;2014 www.masahiroaramaki.com </h4>
+   </div><!--footer-->
+ </div><!--page-->
+<!--///////EndTabla///////-->
+
+<!--///////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+<!--//////pruebaIndex///-->
+   <div data-role="page" id="pruebaIndex" data-add-back-btn="true" >
+     <div data-role="header" data-position="fixed" data-theme="e">
+     <h1>Pruebas de multiplicaciones</h1>
+    </div> 
+     
+   <div data-role="content">
+
+     <ul data-role="listview" data-split-icon="check" data-theme="c" data-divider-theme=
+	 "a" data-count-theme="b" data-inset="true" >
+       <li data-role="list-divider" id="listDivider">Pruebas de los 8 multiplicaciones</li>
+       <li><a href="#multiplicacion2" class="multiplicaciones" name="2"> Multiplicación por 2
+	   <span class="ui-li-count">8 en tabla</span></a></li>
+       <li><a href="#multiplicacion3" class="multiplicaciones" name="3"> Multiplicación por 3
+	   <span class="ui-li-count">7 en tabla</span></a></li>
+       <li><a href="#multiplicacion4" class="multiplicaciones" name="4"> Multiplicación por 4
+	   <span class="ui-li-count">6 en tabla</span></a></li>
+       <li><a href="#multiplicacion5" class="multiplicaciones" name="5"> Multiplicación por 5
+	   <span class="ui-li-count">5 en tabla</span></a></li>
+       <li><a href="#multiplicacion6" class="multiplicaciones" name="6"> Multiplicación por 6
+	   <span class="ui-li-count">4 en tabla</span></a></li>
+       <li><a href="#multiplicacion7" class="multiplicaciones" name="7"> Multiplicación por 7
+	   <span class="ui-li-count">3 en tabla</span></a></li>
+       <li><a href="#multiplicacion8" class="multiplicaciones" name="8"> Multiplicación por 8
+	   <span class="ui-li-count">2 en tabla</span></a></li>
+       <li><a href="#multiplicacion9" class="multiplicaciones" name="9"> Multiplicación por 9
+	   <span class="ui-li-count">1 en tabla</span></a></li>
+     </ul>
+
+  </div><!--content-->
+  
+  <div data-role="footer" data-position="fixed" data-theme="e">
+     <div data-role="navbar">
+       <ul>
+          <li><a href="#resultado" data-icon="star" class="resultadoFinal" 
+		  data-transition="slideup">Resultado</a></li>
+		  <li><a href="#home" data-icon="home" >Home</a></li>         
+          <li><a href="mailto:info@masahiroaramaki.com"  data-icon="info" data-transition="pop">Autor</a>
+		  </li>
+       </ul>
+     </div>
+       <h4>&copy;2014 www.masahiroaramaki.com </h4>
+   </div><!--footer-->
+
+</div><!--page-->
+
+<!--/////////2////////////////////-->
+ <div data-role="page" id="multiplicacion2" class="multipli"  data-theme="e">
+ 
+    <div data-role="header" data-position="fixed" data-theme="e">
+	 <a href="#pruebaIndex" data-icon="grid" >Indice</a>
+	  <h1>Multiplicación por 2</h1>
+	 <a href="#multiplicacion3" name="3" class="multiplicaciones ui-btn-right"> por 3</a>
+   </div>
+	
+   <div data-role="content" >	
+     <div class="muestra"> 
+<ul>
+<li class="aprender"><p>2 * 2 = 4</p></li>
+<li class="aprender"><p>2 * 3 = 6</p></li>
+<li class="aprender"><p>2 * 4 = 8</p></li>
+<li class="aprender"><p>2 * 5 = 10</p></li>
+<li class="aprender"><p>2 * 6 = 12</p></li>
+<li class="aprender"><p>2 * 7 = 14</p></li>
+<li class="aprender"><p>2 * 8 = 16</p></li>
+<li class="aprender"><p>2 * 9 = 18</p></li>
+</ul>
+</div>
+<div class="showHideBoton">
+<input type="button" class="aparece" value="Mostrar/Esconder multiplicacion" data-inline="true"/>
+<div class="escondelo"></div>
+</div>
+<div class="pruebalo">
+
+<p>2 * 
+<span class="numero"></span>
+ =
+ </p>
+<input type="text" class="respuesta" />
+<div class="resultado"></div>
+<p class="respuestaComprobada">Pon la respuesta y click al botón "Comprobar".</p>
+<input type="button" class="comprobar" value="Comprobar" data-inline="true"/>
+<p>Pulsa el botón "Otra prueba" para repetir la prueba</p>
+<a href="#multiplicacion2" data-role= "button" class="multiplicaciones" name="2" data-inline="true">Otra prueba</a>
+</div>
+<div class="rewff">
+
+<a href="#multiplicacion3" data-role= "button" class="multiplicaciones" name="3" data-inline="true">Por 3</a>
+</div>
+     
+   </div><!--content-->
+   
+ <div data-role="footer" data-position="fixed" data-theme="e">
+     <div data-role="navbar">
+       <ul>
+          <li><a href="#resultado" data-icon="star" class="resultadoFinal" 
+		  data-transition="slideup">Resultado</a></li>
+		  <li><a href="#home" data-icon="home" >Home</a></li>          
+          <li><a href="mailto:info@masahiroaramaki.com"  data-icon="info" data-transition="pop">Autor</a>
+		  </li>
+       </ul>
+     </div>
+       <h4>&copy;2014 www.masahiroaramaki.com </h4>
+   </div><!--footer-->  
+</div><!--page-->
+   
+ <!--///////////////3//////////////-->
+  <div data-role="page" id="multiplicacion3" class="multipli"  data-theme="e">
+ 
+    <div data-role="header" data-position="fixed" data-theme="e">
+	 <a href="#multiplicacion2" data-role= "button" class="multiplicaciones" name="2" 
+	 data-inline="true">Por 2</a>
+	  <h1>Multiplicación por 3</h1>
+	  <a href="#multiplicacion4" data-role= "button" class="multiplicaciones ui-btn-right" 
+	  name="4" data-inline="true">Por 4</a>
+     </div>
+	
+   <div data-role="content" >	
+     <div class="muestra"> 
+<ul>
+<li class="noHaceFalta"><p class="tachado">3 * 2 = 6</p>
+<p class="rojo">Esto ya lo sabes. Lo mísmo que 2 * 3.</p></li>
+<li class="aprender"><p>3 * 3 = 9</p></li>
+<li class="aprender"><p>3 * 4 = 12</p></li>
+<li class="aprender"><p>3 * 5 = 15</p></li>
+<li class="aprender"><p>3 * 6 = 18</p></li>
+<li class="aprender"><p>3 * 7 = 21</p></li>
+<li class="aprender"><p>3 * 8 = 24</p></li>
+<li class="aprender"><p>3 * 9 = 27</p></li>
+</ul>
+</div>
+<div class="showHideBoton">
+<input type="button" class="aparece" value="Mostrar/Esconder multiplicacion" data-inline="true"/>
+<div class="escondelo"></div>
+</div>
+<div class="pruebalo">
+
+<p>3 * 
+<span class="numero"></span>
+ =
+ </p>
+<input type="text" class="respuesta" />
+<div class="resultado"></div>
+<p class="respuestaComprobada">Pon la respuesta y click al botón "Comprobar".</p>
+<input type="button" class="comprobar" value="Comprobar" data-inline="true"/>
+<p>Pulsa el botón "Otra prueba" para repetir la prueba</p>
+<a href="#multiplicacion3" data-role= "button" class="multiplicaciones" name="3" data-inline="true">Otra prueba</a>
+</div>
+<div class="rewff">
+
+<a href="#multiplicacion2" data-role= "button" class="multiplicaciones" name="2" data-inline="true">
+Por 2</a>
+<a href="#multiplicacion4" data-role= "button" class="multiplicaciones" name="4" data-inline="true">
+Por 4</a>
+</div>
+     
+   </div><!--content-->
+   
+ <div data-role="footer" data-position="fixed" data-theme="e">
+     <div data-role="navbar">
+       <ul>
+          <li><a href="#resultado" data-icon="star" class="resultadoFinal" 
+		  data-transition="slideup">Resultado</a></li>
+		  <li><a href="#home" data-icon="home" >Home</a></li>          
+          <li><a href="mailto:info@masahiroaramaki.com"  data-icon="info" data-transition="pop">Autor</a>
+		  </li>
+       </ul>
+     </div>
+       <h4>&copy;2014 www.masahiroaramaki.com </h4>
+   </div><!--footer-->  
+</div><!--page-->
+<!--//////////4///////////-->
+ <div data-role="page" id="multiplicacion4" class="multipli"  data-theme="e">
+ 
+    <div data-role="header" data-position="fixed" data-theme="e">
+	 <a href="#multiplicacion3" data-role= "button" class="multiplicaciones" name="3" 
+	 data-inline="true">Por 3</a>
+	  <h1>Multiplicación por 4</h1>
+	  <a href="#multiplicacion5" data-role= "button" class="multiplicaciones ui-btn-right" 
+	  name="5" data-inline="true">Por 5</a>
+ </div>
+	
+   <div data-role="content" >	
+     <div class="muestra"> 
+	 <ul>
+<li class="noHaceFalta"><p class="tachado">4 * 2 = 8</p><p class=rojo>Igual que 2 * 4</p></li>
+<li class="noHaceFalta"><p class="tachado">4 * 3 = 12</p><p class=rojo>Igual que 3 * 4</p></li>
+<li class="aprender"><p>4 * 4 = 16</p></li>
+<li class="aprender"><p>4 * 5 = 20</p></li>
+<li class="aprender"><p>4 * 6 = 24</p></li>
+<li class="aprender"><p>4 * 7 = 28</p></li>
+<li class="aprender"><p>4 * 8 = 32</p></li>
+<li class="aprender"><p>4 * 9 = 36</p></li>
+</ul>
+</div>
+<div class="showHideBoton">
+<input type="button" class="aparece" value="Mostrar/Esconder multiplicacion" data-inline="true"/>
+<div class="escondelo"></div>
+</div>
+<div class="pruebalo">
+
+<p>4 * 
+<span class="numero"></span>
+ =
+ </p>
+<input type="text" class="respuesta" />
+<div class="resultado"></div>
+<p class="respuestaComprobada">Pon la respuesta y click al botón "Comprobar".</p>
+<input type="button" class="comprobar" value="Comprobar" data-inline="true"/>
+<p>Pulsa el botón "Otra prueba" para repetir la prueba</p>
+<a href="#multiplicacion4" data-role= "button" class="multiplicaciones" name="4" data-inline="true">
+Otra prueba</a>
+</div>
+<div class="rewff">
+
+<a href="#multiplicacion3" data-role= "button" class="multiplicaciones" name="3" data-inline="true">
+Por 3</a>
+<a href="#multiplicacion5" data-role= "button" class="multiplicaciones" name="5" data-inline="true">
+Por 5</a>
+</div>
+     
+   </div><!--content-->
+   
+   <div data-role="footer" data-position="fixed" data-theme="e">
+     <div data-role="navbar">
+       <ul>
+          <li><a href="#resultado" data-icon="star" class="resultadoFinal" 
+		  data-transition="slideup">Resultado</a></li>
+		  <li><a href="#home" data-icon="home" >Home</a></li>          
+          <li><a href="mailto:info@masahiroaramaki.com"  data-icon="info" data-transition="pop">Autor</a>
+		  </li>
+       </ul>
+     </div>
+       <h4>&copy;2014 www.masahiroaramaki.com </h4>
+   </div><!--footer-->
+</div><!--page-->
+<!--//////////5///////////-->
+ <div data-role="page" id="multiplicacion5" class="multipli"  data-theme="e">
+ 
+    <div data-role="header" data-position="fixed" data-theme="e">
+	 <a href="#multiplicacion4" data-role= "button" class="multiplicaciones" name="4" 
+	 data-inline="true">Por 4</a>
+	  <h1>Multiplicación por 5</h1>
+	  <a href="#multiplicacion6" data-role= "button" class="multiplicaciones ui-btn-right" 
+	  name="6" data-inline="true">Por 6</a>
+ </div>
+	
+   <div data-role="content" >	
+     <div class="muestra"> 
+<ul>
+<li class="noHaceFalta"><p class="tachado">5 * 2 = 10</p><p class=rojo>Igual que 2 * 5</p></li>
+<li class="noHaceFalta"><p class="tachado">5 * 3 = 15</p><p class=rojo>Igual que 3 * 5</p></li>
+<li class="noHaceFalta"><p class="tachado">5 * 4 = 20</p><p class=rojo>Igual que 4 * 5</p></li>
+<li class="aprender"><p>5 * 5 = 25</p></li>
+<li class="aprender"><p>5 * 6 = 30</p></li>
+<li class="aprender"><p>5 * 7 = 35</p></li>
+<li class="aprender"><p>5 * 8 = 40</p></li>
+<li class="aprender"><p>5 * 9 = 45</p></li>
+</ul>
+</div>
+<div class="showHideBoton">
+<input type="button" class="aparece" value="Mostrar/Esconder multiplicacion" data-inline="true"/>
+<div class="escondelo"></div>
+</div>
+<div class="pruebalo">
+
+<p>5 * 
+<span class="numero"></span>
+ =
+ </p>
+<input type="text" class="respuesta" />
+<div class="resultado"></div>
+<p class="respuestaComprobada">Pon la respuesta y click al botón "Comprobar".</p>
+<input type="button" class="comprobar" value="Comprobar" data-inline="true"/>
+<p>Pulsa el botón "Otra prueba" para repetir la prueba</p>
+<a href="#multiplicacion5" data-role= "button" class="multiplicaciones" name="5" data-inline="true">
+Otra prueba</a>
+</div>
+<div class="rewff">
+
+<a href="#multiplicacion4" data-role= "button" class="multiplicaciones" name="4" data-inline="true">
+Por 4</a>
+<a href="#multiplicacion6" data-role= "button" class="multiplicaciones" name="6" data-inline="true">
+Por 6</a>
+</div>
+     
+   </div><!--content-->
+   <div data-role="footer" data-position="fixed" data-theme="e">
+     <div data-role="navbar">
+       <ul>
+          <li><a href="#resultado" data-icon="star" class="resultadoFinal"  
+		  data-transition="slideup">Resultado</a></li>
+		  <li><a href="#home" data-icon="home" >Home</a></li>          
+          <li><a href="mailto:info@masahiroaramaki.com"  data-icon="info" data-transition="pop">Autor</a>
+		  </li>
+       </ul>
+     </div>
+       <h4>&copy;2014 www.masahiroaramaki.com </h4>
+   </div><!--footer-->
+   
+</div><!--page-->
+<!--//////////6///////////-->
+ <div data-role="page" id="multiplicacion6" class="multipli"  data-theme="e">
+ 
+    <div data-role="header" data-position="fixed" data-theme="e">
+	 <a href="#multiplicacion5" data-role= "button" class="multiplicaciones" name="5" 
+	 data-inline="true">Por 5</a>
+	  <h1>Multiplicación por 6</h1>
+	  <a href="#multiplicacion7" data-role= "button" class="multiplicaciones ui-btn-right" 
+	  name="7" data-inline="true">Por 7</a>
+    </div>
+	
+   <div data-role="content" >	
+     <div class="muestra"> 
+	 <ul>
+<li class="noHaceFalta"><p class="tachado">6 * 2 = 12</p><p class=rojo>Igual que 2 * 6</p></li>
+<li class="noHaceFalta"><p class="tachado">6 * 3 = 18</p><p class=rojo>Igual que 3 * 6</p></li>
+<li class="noHaceFalta"><p class="tachado">6 * 4 = 24</p><p class=rojo>Igual que 4 * 6</p></li>
+<li class="noHaceFalta"><p class="tachado">6 * 5 = 30</p><p class=rojo>Igual que 5 * 6</p></li>
+<li class="aprender"><p>6 * 6 = 36</p></li>
+<li class="aprender"><p>6 * 7 = 42</p></li>
+<li class="aprender"><p>6 * 8 = 48</p></li>
+<li class="aprender"><p>6 * 9 = 54</p></li>
+</ul>
+</div>
+<div class="showHideBoton">
+<input type="button" class="aparece" value="Mostrar/Esconder multiplicacion" data-inline="true"/>
+<div class="escondelo"></div>
+</div>
+<div class="pruebalo">
+
+<p>6 * 
+<span class="numero"></span>
+ =
+ </p>
+<input type="text" class="respuesta" />
+<div class="resultado"></div>
+<p class="respuestaComprobada">Pon la respuesta y click al botón "Comprobar".</p>
+<input type="button" class="comprobar" value="Comprobar" data-inline="true"/>
+<p>Pulsa el botón "Otra prueba" para repetir la prueba</p>
+<a href="#multiplicacion6" data-role= "button" class="multiplicaciones" name="6" data-inline="true">
+Otra prueba</a>
+</div>
+<div class="rewff">
+
+<a href="#multiplicacion5" data-role= "button" class="multiplicaciones" name="5" data-inline="true">
+Por 5</a>
+<a href="#multiplicacion7" data-role= "button" class="multiplicaciones" name="7" data-inline="true">
+Por 7</a>
+</div>
+     
+   </div><!--content-->
+<div data-role="footer" data-position="fixed" data-theme="e">
+     <div data-role="navbar">
+       <ul>
+          <li><a href="#resultado" data-icon="star" class="resultadoFinal" 
+		  data-transition="slideup">Resultado</a></li>
+		  <li><a href="#home" data-icon="home" >Home</a></li>          
+          <li><a href="mailto:info@masahiroaramaki.com"  data-icon="info" data-transition="pop">Autor</a>
+		  </li>
+       </ul>
+     </div>
+       <h4>&copy;2014 www.masahiroaramaki.com </h4>
+   </div><!--footer-->   
+   
+</div><!--page-->
+<!--//////////7///////////-->
+ <div data-role="page" id="multiplicacion7" class="multipli"  data-theme="e">
+ 
+    <div data-role="header" data-position="fixed" data-theme="e">
+	 <a href="#multiplicacion6" data-role= "button" class="multiplicaciones" name="6" 
+	 data-inline="true">Por 6</a>
+	  <h1>Multiplicación por 7</h1>
+	  <a href="#multiplicacion8" data-role= "button" class="multiplicaciones ui-btn-right" 
+	  name="8" data-inline="true">Por 8</a>
+    </div>
+	
+   <div data-role="content" >	
+     <div class="muestra"> 
+	 <ul>
+<li class="noHaceFalta"><p class="tachado">7 * 2 = 14</p><p class=rojo>Igual que 2 * 7</p></li>
+<li class="noHaceFalta"><p class="tachado">7 * 3 = 21</p><p class=rojo>Igual que 3 * 7</p></li>
+<li class="noHaceFalta"><p class="tachado">7 * 4 = 28</p><p class=rojo>Igual que 4 * 7</p></li>
+<li class="noHaceFalta"><p class="tachado">7 * 5 = 35</p><p class=rojo>Igual que 5 * 7</p></li>
+<li class="noHaceFalta"><p class="tachado">7 * 6 = 42</p><p class=rojo>Igual que 6 * 7</p></li>
+<li class="aprender"><p>7 * 7 = 49</p></li>
+<li class="aprender"><p>7 * 8 = 56</p></li>
+<li class="aprender"><p>7 * 9 = 63</p></li>
+</ul>
+</div>
+<div class="showHideBoton">
+<input type="button" class="aparece" value="Mostrar/Esconder multiplicacion" data-inline="true"/>
+<div class="escondelo"></div>
+</div>
+<div class="pruebalo">
+
+<p>7 * 
+<span class="numero"></span>
+ =
+ </p>
+<input type="text" class="respuesta" />
+<div class="resultado"></div>
+<p class="respuestaComprobada">Pon la respuesta y click al botón "Comprobar".</p>
+<input type="button" class="comprobar" value="Comprobar" data-inline="true"/>
+<p>Pulsa el botón "Otra prueba" para repetir la prueba</p>
+<a href="#multiplicacion7" data-role= "button" class="multiplicaciones" name="7" data-inline="true">
+Otra prueba</a>
+</div>
+<div class="rewff">
+
+<a href="#multiplicacion6" data-role= "button" class="multiplicaciones" name="6" data-inline="true">
+Por 6</a>
+<a href="#multiplicacion8" data-role= "button" class="multiplicaciones" name="8" data-inline="true">
+Por 8</a>
+</div>
+     
+   </div><!--content-->
+ <div data-role="footer" data-position="fixed" data-theme="e">
+     <div data-role="navbar">
+       <ul>
+          <li><a href="#resultado" data-icon="star" class="resultadoFinal" 
+		  data-transition="slideup">Resultado</a></li>
+		  <li><a href="#home" data-icon="home" >Home</a></li>         
+          <li><a href="mailto:info@masahiroaramaki.com"  data-icon="info" data-transition="pop">Autor</a>
+		  </li>
+       </ul>
+     </div>
+       <h4>&copy;2014 www.masahiroaramaki.com </h4>
+   </div><!--footer-->  
+   
+</div><!--page-->
+<!--//////////8///////////-->
+ <div data-role="page" id="multiplicacion8" class="multipli"  data-theme="e">
+ 
+    <div data-role="header" data-position="fixed" data-theme="e">
+	 <a href="#multiplicacion7" data-role= "button" class="multiplicaciones" name="7" 
+	 data-inline="true">Por 7</a>
+	  <h1>Multiplicación por 8</h1>
+	  <a href="#multiplicacion9" data-role= "button" class="multiplicaciones ui-btn-right" 
+	  name="9" data-inline="true">Por 9</a>
+    </div>
+	
+   <div data-role="content" >	
+     <div class="muestra"> 
+	 <ul>
+<li class="noHaceFalta"><p class="tachado">8 * 2 = 14</p><p class=rojo>Igual que 2 * 8</p></li>
+<li class="noHaceFalta"><p class="tachado">8 * 3 = 21</p><p class=rojo>Igual que 3 * 8</p></li>
+<li class="noHaceFalta"><p class="tachado">8 * 4 = 28</p><p class=rojo>Igual que 4 * 8</p></li>
+<li class="noHaceFalta"><p class="tachado">8 * 5 = 35</p><p class=rojo>Igual que 5 * 8</p></li>
+<li class="noHaceFalta"><p class="tachado">8 * 6 = 42</p><p class=rojo>Igual que 6 * 8</p></li>
+<li class="noHaceFalta"><p class="tachado">8 * 7 = 49</p><p class=rojo>Igual que 7 * 8</p></li>
+<li class="aprender"><p>8 * 8 = 56</p></li>
+<li class="aprender"><p>8 * 9 = 63</p></li>
+</ul>
+</div>
+<div class="showHideBoton">
+<input type="button" class="aparece" value="Mostrar/Esconder multiplicacion" data-inline="true"/>
+<div class="escondelo"></div>
+</div>
+<div class="pruebalo">
+
+<p>8 * 
+<span class="numero"></span>
+ =
+ </p>
+<input type="text" class="respuesta" />
+<div class="resultado"></div>
+<p class="respuestaComprobada">Pon la respuesta y click al botón "Comprobar".</p>
+<input type="button" class="comprobar" value="Comprobar" data-inline="true"/>
+<p>Pulsa el botón "Otra prueba" para repetir la prueba</p>
+<a href="#multiplicacion8" data-role= "button" class="multiplicaciones" name="8" data-inline="true">
+Otra prueba</a>
+</div>
+<div class="rewff">
+
+<a href="#multiplicacion7" data-role= "button" class="multiplicaciones" name="7" data-inline="true">
+Por 7</a>
+<a href="#multiplicacion9" data-role= "button" class="multiplicaciones" name="9" data-inline="true">
+Por 9</a>
+</div>
+     
+   </div><!--content-->
+   
+  <div data-role="footer" data-position="fixed" data-theme="e">
+     <div data-role="navbar">
+       <ul>
+          <li><a href="#resultado" data-icon="star" class="resultadoFinal" 
+		  data-transition="slideup">Resultado</a></li>
+		  <li><a href="#home" data-icon="home" >Home</a></li>         
+          <li><a href="mailto:info@masahiroaramaki.com"  data-icon="info" data-transition="pop">Autor</a>
+		  </li>
+       </ul>
+     </div>
+       <h4>&copy;2014 www.masahiroaramaki.com </h4>
+   </div><!--footer--> 
+</div><!--page-->
+<!--//////////9///////////-->
+ <div data-role="page" id="multiplicacion9" class="multipli"  data-theme="e">
+ 
+    <div data-role="header" data-position="fixed" data-theme="e">
+	 <a href="#multiplicacion8" data-role= "button" class="multiplicaciones" name="8" 
+	 data-inline="true">Por 8</a>
+	  <h1>Multiplicación por 9</h1>
+	 <a href="#pruebaIndex" data-icon="grid" class="ui-btn-right">Indice</a>
+     </div>
+	
+   <div data-role="content" >	
+     <div class="muestra"> 
+	 <ul>
+<li class="noHaceFalta"><p class="tachado">9 * 2 = 18</p><p class=rojo>Igual que 2 * 9</p></li>
+<li class="noHaceFalta"><p class="tachado">9 * 3 = 27</p><p class=rojo>Igual que 3 * 9</p></li>
+<li class="noHaceFalta"><p class="tachado">9 * 4 = 36</p><p class=rojo>Igual que 4 * 9</p></li>
+<li class="noHaceFalta"><p class="tachado">9 * 5 = 45</p><p class=rojo>Igual que 5 * 9</p></li>
+<li class="noHaceFalta"><p class="tachado">9 * 6 = 54</p><p class=rojo>Igual que 6 * 9</p></li>
+<li class="noHaceFalta"><p class="tachado">9 * 7 = 63</p><p class=rojo>Igual que 7 * 9</p></li>
+<li class="noHaceFalta"><p class="tachado">9 * 8 = 72</p><p class=rojo>Igual que 8 * 9</p></li>
+<li class="aprender"><p>9 * 9 = 81</p></li>
+</ul>
+</div>
+<div class="showHideBoton">
+<input type="button" class="aparece" value="Mostrar/Esconder multiplicacion" data-inline="true"/>
+<div class="escondelo"></div>
+</div>
+<div class="pruebalo">
+
+<p>9 * 
+<span class="numero"></span>
+ =
+ </p>
+<input type="text" class="respuesta" />
+<div class="resultado"></div>
+<p class="respuestaComprobada">Pon la respuesta y click al botón "Comprobar".</p>
+<input type="button" class="comprobar" value="Comprobar" data-inline="true"/>
+<p>Pulsa el botón "Otra prueba" para repetir la prueba</p>
+<a href="#multiplicacion9" data-role= "button" class="multiplicaciones" name="9" data-inline="true">
+Otra prueba</a>
+</div>
+<div class="rewff">
+
+<a href="#multiplicacion8" data-role= "button" class="multiplicaciones" name="8" data-inline="true">
+Por 8</a>
+</div>
+     
+   </div><!--content-->
+ <div data-role="footer" data-position="fixed" data-theme="e">
+     <div data-role="navbar">
+       <ul>
+          <li><a href="#resultado" data-icon="star" class="resultadoFinal" 
+		  data-transition="slideup">Resultado</a></li>
+		  <li><a href="#home" data-icon="home" >Home</a></li>          
+          <li><a href="mailto:info@masahiroaramaki.com"  data-icon="info" data-transition="pop">Autor</a>
+		  </li>
+       </ul>
+     </div>
+       <h4>&copy;2014 www.masahiroaramaki.com </h4>
+   </div><!--footer-->  
+   
+</div><!--page-->
+<!--//////////resultado///////////-->
+ <div data-role="page" id="resultado"   data-theme="e">
+ 
+    <div data-role="header" data-position="fixed" data-theme="e">
+	 <a href="#pruebaIndex" data-role= "button" class="" data-icon="grid" data-inline="true">Indice</a>
+	  <h1>Resultado</h1>
+	  <a href="#home" data-role= "button" class=" ui-btn-right" data-icon="home" data-inline="true">Home
+	  </a>
+    </div>
+	
+   <div data-role="content" id="totalResult">	
+     <p>Resultado</p>     
+   </div><!--content-->
+     
+ </div><!--page-->
+</body>
+</html>
